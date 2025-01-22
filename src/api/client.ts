@@ -19,7 +19,7 @@ export async function client(
   let data;
   try {
     const response = await window.fetch(
-      `${process.env.REACT_APP_BASE_URL}${endpoint}`,
+      `http://localhost:5000/api/${endpoint}`,
       config
     );
     data = await response.json();

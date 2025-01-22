@@ -53,15 +53,15 @@ const Login = () => {
   const onSubmit = async (data: any) => {
     const userDetail: any = { ...data, updateToken: true, deviceToken: null };
     try {
-      // await dispatch(login(userDetail));
-      // if (localStorage.getItem("token")) {
-      //   success("Login successful! 😀");
-      // }
-      // if (!registerd) {
-      //   navigate("/driver/personal-information");
-      // } else {
-      //   navigate("/preview");
-      // }
+      await dispatch(login(userDetail));
+      if (localStorage.getItem("token")) {
+        success("Login successful! 😀");
+      }
+      if (!registerd) {
+        navigate("/driver/personal-information");
+      } else {
+        navigate("/preview");
+      }
       navigate("/admin/product")
     } catch (error) {
       console.log("Login Error", error);

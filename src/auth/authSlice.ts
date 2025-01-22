@@ -5,7 +5,7 @@ import { RootState } from "../app/store";
 
 export const login = createAppAsyncThunk("auth/login", async (data: any) => {
   try {
-    const res = await client.post("/hireDriver/login", data, {});
+    const res = await client.post("auth/signin", data, {});
     if (res?.data?.token) {
       console.log(res, "RES");
       localStorage.setItem(

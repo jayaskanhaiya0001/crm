@@ -58,6 +58,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/ckeditor__ckeditor5-build-classic": "^37.0.4",
     "@types/react-toastify": "^4.0.2"
   }
